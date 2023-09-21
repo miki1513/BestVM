@@ -18,7 +18,7 @@ D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait 
 
 //remove -usbdevice tablet for pointer lock
 
-var qemuproc=exec('D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -device intel-hda -device hda-output -vnc :0 -boot d -cdrom "D:/VirtualBox VMs/more ISOs/geexbox-3.1-x86_64.iso" -m 2048 -net nic,model=e1000 -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware'),
+var qemuproc=exec('qemu-system-x86_64 -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -device intel-hda -device hda-output -vnc :0 -boot d -cdrom -m 2048 -net nic,model=e1000 -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware'),
 	telqmp=null,
 	wsPort = 80,
 	listeners = {},
@@ -35,7 +35,7 @@ var qemuproc=exec('D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:
 	cachedscreen="",
 	cachedliteraldata=[],
 	sleep=ms=>new Promise(a=>setTimeout(a,ms)),
-	fps=20,
+	fps=60,
 	mousefps=10,
 	relSens=2,
 	imgq={quality:0.25,progressive:true,chromaSubsampling:true},
