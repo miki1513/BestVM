@@ -9,12 +9,6 @@ const { createCanvas } = require('canvas')
 const canvas = createCanvas(1,1);
 const ctx = canvas.getContext('2d');
 
-/*
-D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -device intel-hda -device hda-output -vnc :0 -boot d -cdrom "D:/VirtualBox VMs/slax-64bit-9.11.0.iso" -m 2048 -net nic,model=virtio -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware
-D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -device intel-hda -device hda-output -vnc :0 -boot d -cdrom "D:/VirtualBox VMs/more ISOs/geexbox-3.1-x86_64.iso" -m 2048 -net nic,model=e1000 -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware
-D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -vnc :0 -device intel-hda -device hda-output -hda D:/Documents/cvm/emulator/hda.img -m 3072 -net nic,model=e1000 -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware
-D:/qemu/qemu-system-x86_64.exe -L D:/qemu -qmp tcp:127.0.0.1:1984,server,nowait -accel hax -vnc :0 -device intel-hda -device hda-output -boot d -cdrom "D:/VirtualBox VMs/webconverger.iso" -m 3072 -net nic,model=virtio -net user -rtc base=localtime,clock=host -smp cores=4,threads=4 -usbdevice tablet -vga vmware
-*/
 
 //remove -usbdevice tablet for pointer lock
 
