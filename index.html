@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BestVM</title>
+    <title>BestVM - Connected to servers</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta charset="utf8"/>
     <style>
@@ -529,6 +529,9 @@
     };
     function turn(){
       socket.send("&");
+    }
+    function connected(){
+      console.log("Currently connected to servers");
     }
   </script>
 </html>
